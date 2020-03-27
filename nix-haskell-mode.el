@@ -132,6 +132,7 @@
   ghc862 = (import (builtins.fetchTarball \"channel:nixos-18.09\") {}).haskell.compiler.ghc862;
   ghc863 = (import (builtins.fetchTarball \"channel:nixos-18.09\") {}).haskell.compiler.ghc863;
   ghc864 = (import (builtins.fetchTarball \"channel:nixos-19.03\") {}).haskell.compiler.ghc864;
+  ghc865 = (import <nixpkgs> {}).haskell.compiler.ghc865;
 } }: let
   inherit (pkgs) lib;
   getGhc = name: let compilerName = lib.replaceStrings [\".\" \"-\"] [\"\" \"\"] name;
